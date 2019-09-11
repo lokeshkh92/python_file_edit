@@ -16,13 +16,13 @@ for gzfile in filelist:
         for line in fr:
             #print(line)
             lines = line.split(',')
-            RecordTime = lines[0]
-            rmngPartnerNWId = lines[22]
-            partnerNWId = lines[23]
+            #RecordTime = lines[0]
+            #rmngPartnerNWId = lines[22]
+            #partnerNWId = lines[23]
             #print("RecordTime: {}".format(RecordTime))
             #print("Original rmngPartner: {}".format(rmngPartnerNWId))
             #print("Original Partner: {}".format(partnerNWId))
-            #Copy value of partnerNWId to rmngPartnerNWId
+            #Copy value of column#23 to column#22
             if lines[2] == '3' and lines[22] == '0':
                 lines[22] = lines[23]
             #print("New rmngPartner: {}".format(lines[22]))
